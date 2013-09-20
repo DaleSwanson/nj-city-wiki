@@ -17,7 +17,7 @@ $alias{"Council-Manager"} = "Faulkner Act (Council-Manager)";
 $alias{"Faulkner Act (Council-Manager)"} = "Faulkner Act (Council-Manager)";
 $alias{"Faulkner Act Council-Manager"} = "Faulkner Act (Council-Manager)";
 $alias{"Faulkner Act Mayor-Council"} = "Faulkner Act (Mayor-Council)";
-$alias{"Faulkner Act"} = "Faulkner Act (Mayor-Council)";
+$alias{"Faulkner Act"} = "Faulkner Act (Mayor-Council)"; #there is only one, and this is it
 $alias{"Mayor-Council"} = "Faulkner Act (Mayor-Council)";
 $alias{"Faulkner Act (Mayor-Council)"} = "Faulkner Act (Mayor-Council)";
 $alias{"Faulkner Act (Mayor-Council-Administrator)"} = "Faulkner Act (Mayor-Council-Administrator)";
@@ -60,7 +60,6 @@ foreach  my $url (@urlarray)
 	open $ifile, '<', $linxdump;
 		local $/; #load whole file into string
 		my $thisfile = <$ifile>;
-		#print $thisfile;
 		#            • Type          Walsh Act
 		$thisfile =~ m/\s+•\sType\s+(.+)\n/;
 		my $form = $1;
@@ -68,104 +67,12 @@ foreach  my $url (@urlarray)
 		$form = $alias{$form};
 		print $ofile "\n$url;$form";
 		
-		
-		
-		
-		#if ($thisfile =~ m/Council-Manager/i)
-		#{
-			#print $ofile "\n$url; Council-Manager";
-		#}
-		#if ($thisfile =~ m/Small Municipality Plan/i)
-		#{
-			#print $ofile "\n$url; Small Municipality Plan";
-		#}
-		#if ($thisfile =~ m/Mayor-Council/i)
-		#{
-			#print $ofile "\n$url; Mayor-Council";
-		#}
-		#if ($thisfile =~ m/Mayor-Council-Administrator/i)
-		#{
-			#print $ofile "\n$url; Mayor-Council-Administrator";
-		#}
-		#if ($thisfile =~ m/1923 Municipal Manager Law/i)
-		#{
-			#print $ofile "\n$url; 1923 Municipal Manager Law";
-		#}
-		#if ($thisfile =~ m/special charter/i)
-		#{
-			#print $ofile "\n$url; special charter";
-		#}
-		#if ($thisfile =~ m/Walsh Act/i)
-		#{
-			#print $ofile "\n$url; Walsh Act";
-		#}
-		#if ($thisfile =~ m/Town form/i)
-		#{
-			#print $ofile "\n$url; Town form";
-		#}
-		#if ($thisfile =~ m/Borough form/i)
-		#{
-			#print $ofile "\n$url; Borough form";
-		#}
-		#if ($thisfile =~ m/Township form/i)
-		#{
-			#print $ofile "\n$url; Township form";
-		#}
-		#if ($thisfile =~ m/City form/i)
-		#{
-			#print $ofile "\n$url; City form";
-		#}
-		#if ($thisfile =~ m/Village form/i)
-		#{
-			#print $ofile "\n$url; Village form";
-		#}
-		
-		
-		
-		
-		
-		
-		
 	close $ifile;
-	
-	
-	
-	
 	
 	
 }
 
 close $ofile;
-
-
-#Faulkner Act form of Government under the Small Municipality Plan
-#Faulkner Act (Council-Manager)
-
-#Mayor-Council-Administrator
-
-#Faulkner Act (Mayor-Council) Plan E form of municipal government
-#Faulkner Act (Mayor-Council) Plan C as the form of local government
-#governed under the Mayor-Council system of municipal government under the Faulkner Act
-#mayor-council form of government under the Faulkner Act
-
-#governed under the 1923 Municipal Manager Law
-#special charter
-#Walsh Act form of government
-
-#Town form of New Jersey municipal government
-#Township form of government
-#Borough form of New Jersey municipal government
-#City form of government
-#City form of New Jersey municipal government
-
-
-
-
-
-
-
-
-
 
 
 
